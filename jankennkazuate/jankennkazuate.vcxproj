@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="janken.cpp" />
     <ClCompile Include="kazuate.cpp" />
     <ClCompile Include="main.cpp" />

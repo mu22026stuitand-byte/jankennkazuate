@@ -1,18 +1,28 @@
 #include <iostream>
-#include"game.h"
-#include "janken.h"
+#include "game.h"
 using namespace std;
 
-//int Judge(int x,int y)
-//{
-//
-//}
-void preparation()
+enum Hand
 {
-	
-}
-void janken()
+	ROCK,
+	SCISSORS,
+	PAPER
+};
+static int Judge(int x,int y)
 {
-	void InitRand();
 
+}
+static void Preparation()
+{
+	int playerHand, CPUHand;
+	CPUHand = RandValue()%3;
+	cout << "手をお決めください" << endl << "0.グー" << endl << "1.チョキ" << endl << "2.パー" << endl << ">";
+	cin >> playerHand;
+	Judge(playerHand, CPUHand);
+
+}
+void Janken()
+{	
+	Preparation();
+	
 }

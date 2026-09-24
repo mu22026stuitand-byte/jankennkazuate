@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include"janken.h"
+#include"kazuate.h"
 using namespace std;
 
 enum Mode
@@ -16,13 +18,13 @@ void SelectMode()
 
 	switch (mode)
 	{
-	case 0:
+	case MO_END_PROGRAM:
 		cout << "プログラムを終了します" << endl;
 		break;
-	case 1:
+	case MO_JANKEN:
 		cout << "じゃんけんを開始" << endl;
 		break;
-	case 2:
+	case MO_KAZUATE:
 		cout << "数当てを開始" << endl;
 		break;
 	}
