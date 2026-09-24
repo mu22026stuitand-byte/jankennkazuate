@@ -1,4 +1,7 @@
 ﻿#include <iostream>
+#include<cstdlib>
+#include<ctime>
+#include"game.h"
 #include"janken.h"
 #include"kazuate.h"
 using namespace std;
@@ -33,6 +36,7 @@ void SelectMode()
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	SelectMode();
 
 }
