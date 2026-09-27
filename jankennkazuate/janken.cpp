@@ -15,7 +15,7 @@ enum Hand
 	SCISSORS,
 	PAPER
 };
-static void ShowResult()
+static void ShowResult(Result result)
 {
 
 }
@@ -23,26 +23,23 @@ static void ShowResult()
 
 static void Judge(int playerHand,int cpuHand)
 {
-	int result;
+	Result result;
 	//勝敗判定
-	if (playerHand == ROCK)
+	if (playerHand== cpuHand) result = DRAW;
+	else if (playerHand == ROCK)
 	{
 		if (cpuHand== SCISSORS) result = WIN;
-		else if (cpuHand== PAPER) result = LOSS;
-		else if (cpuHand== ROCK) result = DRAW;
-
+		else result = LOSS;
 	}
 	else if (playerHand == SCISSORS)
 	{
 		if (cpuHand== PAPER) result = WIN;
-		else if (cpuHand== ROCK) result = LOSS;
-		else if (cpuHand== SCISSORS) result = DRAW;
+		else result = LOSS;
 	}
 	else if (playerHand == PAPER)
 	{
 		if(cpuHand== ROCK) result = WIN;
-		else if (cpuHand== SCISSORS) result = LOSS;
-		else if (cpuHand== PAPER) result = DRAW;
+		else result = LOSS;
 	}
 
 }
