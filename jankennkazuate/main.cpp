@@ -26,6 +26,7 @@ void SelectMode()
 		break;
 	case MO_JANKEN:
 		cout << "じゃんけんを開始" << endl;
+		Janken();
 		break;
 	case MO_KAZUATE:
 		cout << "数当てを開始" << endl;
@@ -36,7 +37,7 @@ void SelectMode()
 
 int main()
 {
-	srand((unsigned int)time(NULL));
+	srand((unsigned int)time(NULL));//乱数を混ぜる
 	SelectMode();
 
 }

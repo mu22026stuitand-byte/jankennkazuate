@@ -15,27 +15,36 @@ enum Hand
 	SCISSORS,
 	PAPER
 };
-static int Judge(int x,int y)
+static void ShowResult()
 {
-	if (x == ROCK)
+
+}
+
+
+static void Judge(int playerHand,int cpuHand)
+{
+	int result;
+	//勝敗判定
+	if (playerHand == ROCK)
 	{
-		if (y == SCISSORS) return WIN;
-		if (y == PAPER) return LOSS;
-		if (y == ROCK) return DRAW;
+		if (cpuHand== SCISSORS) result = WIN;
+		else if (cpuHand== PAPER) result = LOSS;
+		else if (cpuHand== ROCK) result = DRAW;
 
 	}
-	if (x == SCISSORS)
+	else if (playerHand == SCISSORS)
 	{
-		if (y == PAPER) return WIN;
-		if (y == ROCK) return LOSS;
-		if (y == SCISSORS) return DRAW;
+		if (cpuHand== PAPER) result = WIN;
+		else if (cpuHand== ROCK) result = LOSS;
+		else if (cpuHand== SCISSORS) result = DRAW;
 	}
-	if (x == PAPER)
+	else if (playerHand == PAPER)
 	{
-		if(y == ROCK) return WIN;
-		if (y == SCISSORS) return LOSS;
-		if (y == PAPER) return DRAW;
+		if(cpuHand== ROCK) result = WIN;
+		else if (cpuHand== SCISSORS) result = LOSS;
+		else if (cpuHand== PAPER) result = DRAW;
 	}
+
 }
 static void Preparation()
 {
@@ -48,6 +57,7 @@ static void Preparation()
 }
 void Janken()
 {	
-	Preparation();
+	//Preparation();
+	cout << "a";
 	
 }

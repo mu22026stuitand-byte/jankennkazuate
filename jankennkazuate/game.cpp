@@ -5,5 +5,5 @@
 int RandValue()
 {
 	srand((unsigned int)time(NULL));
-	return rand() 
+	return rand();
 }
