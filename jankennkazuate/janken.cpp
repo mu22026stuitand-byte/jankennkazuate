@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "game.h"
 using namespace std;
 
@@ -15,15 +15,29 @@ enum Hand
 	SCISSORS,
 	PAPER
 };
-static void ShowResult(Result result)
+static void ShowResult(Result result, int playerHand, int cpuHand)
 {
-
+	
+	cout << "今回の結果は" ;
+	if (result == WIN)
+	{
+		cout << "あなたの勝ち" << endl;
+	}
+	else if (result == LOSS)
+	{
+		cout << "CPUの勝ち" << endl;
+	}
+	else
+	{
+		cout << "引き分け" << endl;
+	}
+	//cout << endl<<"今回の手"<<endl;
+	//cout << "あなた" ;
 }
-
 
 static void Judge(int playerHand,int cpuHand)
 {
-	Result result;
+	Result result = WIN;
 	//勝敗判定
 	if (playerHand== cpuHand) result = DRAW;
 	else if (playerHand == ROCK)
@@ -41,6 +55,7 @@ static void Judge(int playerHand,int cpuHand)
 		if(cpuHand== ROCK) result = WIN;
 		else result = LOSS;
 	}
+	ShowResult(result, playerHand, cpuHand);
 
 }
 static void Preparation()
@@ -53,8 +68,23 @@ static void Preparation()
 
 }
 void Janken()
-{	
-	//Preparation();
-	cout << "a";
+{
+	for (;;)
+	{
+		Preparation();
+		
+		int endSelection =2;
+		for (;endSelection > 1;)
+		{
+			cout << "もう一戦？" << endl << "0.もう一戦！" << endl<<"1.終わる";
+			cin >> endSelection;
+			
+		}
+		if (endSelection == 1)
+		{
+			break;
+		}
+	}
+	
 	
 }
