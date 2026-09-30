@@ -30,6 +30,7 @@ void SelectMode()
 		break;
 	case MO_KAZUATE:
 		cout << "数当てを開始" << endl;
+		Kazuate();
 		break;
 	}
 
