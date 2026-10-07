@@ -69,22 +69,14 @@ static void Preparation()
 }
 void Janken()
 {
-	for (;;)
+	int endSelection =2;
+	do
 	{
 		Preparation();
+
+		Onemoregame(endSelection);
 		
-		int endSelection =2;
-		for (;endSelection > 1;)
-		{
-			cout << "もう一戦？" << endl << "0.もう一戦！" << endl<<"1.終わる";
-			cin >> endSelection;
-			
-		}
-		if (endSelection == 1)
-		{
-			break;
-		}
-	}
+	} while (endSelection != 1);
 	
 	
 }

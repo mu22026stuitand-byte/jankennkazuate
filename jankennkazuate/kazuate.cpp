@@ -15,7 +15,7 @@ static void InGame (unsigned int targetValue)
 		cin >> predictedNumber;
 		if ( answer == predictedNumber)
 		{
-			cout << predictedNumber << "正解" << endl << turn << "回目でクリア" << endl;
+			cout << predictedNumber << "正解" << endl<< endl << turn << "回目でクリア" << endl << endl;
 			break;
 		}
 		else if ( answer > predictedNumber)
@@ -36,25 +36,20 @@ static void Preparation()
 	cout << "0から～";
 	cin >> targetValue;
 
-	InGame(targetValue);
+	if (targetValue > 0)//0除算対策
+	{
+		InGame(targetValue);
+	}
 
 }
 void Kazuate()
 {
-	for (;;)
+	int endSelection = 2;
+	do
 	{
 		Preparation();
 
-		int endSelection = 2;
-		for (;endSelection > 1;)
-		{
-			cout << "もっかい？" << endl << "0.もっかい！" << endl << "1.終わる" << endl;
-			cin >> endSelection;
+		Onemoregame(endSelection);
 
-		}
-		if (endSelection == 1)
-		{
-			break;
-		}
-	}
+	} while (endSelection != 1);
 }

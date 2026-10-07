@@ -1,3 +1,4 @@
-#pragma once
+﻿#pragma once
 
 int RandValue();
+void Onemoregame(int& endSelection);
