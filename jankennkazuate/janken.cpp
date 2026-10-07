@@ -17,7 +17,10 @@ enum Hand
 };
 static void ShowResult(Result result, int playerHand, int cpuHand)
 {
-	
+	const char* str[] = { "グー","チョキ","パー"};
+	cout << endl<<"今回の手"<<endl;
+	cout << "あなた" <<" "<<str[playerHand];
+	cout << "CPU" << " " << str[cpuHand] << endl;
 	cout << "今回の結果は" ;
 	if (result == WIN)
 	{
@@ -31,8 +34,7 @@ static void ShowResult(Result result, int playerHand, int cpuHand)
 	{
 		cout << "引き分け" << endl;
 	}
-	//cout << endl<<"今回の手"<<endl;
-	//cout << "あなた" ;
+	
 }
 
 static void Judge(int playerHand,int cpuHand)
