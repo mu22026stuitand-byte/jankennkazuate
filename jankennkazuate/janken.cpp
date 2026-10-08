@@ -76,7 +76,7 @@ void Janken()
 	{
 		Preparation();
 
-		Onemoregame(endSelection);
+		OneMoreGame(endSelection);
 		
 	} while (endSelection != 1);
 	
