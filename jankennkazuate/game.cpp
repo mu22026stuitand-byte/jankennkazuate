@@ -8,7 +8,7 @@ int RandValue()
 	return rand();
 }
 
-void Onemoregame(int & endSelection)
+void OneMoreGame(int & endSelection)
 {
 	endSelection = 2;
 	for (;endSelection > 1;)
